@@ -7,6 +7,6 @@ class TypografCommand(sublime_plugin.TextCommand):
 			if not region.empty():
 				selection = self.view.substr(region)
 				params = urllib.parse.urlencode({ 'text':selection })
-				params = params.encode('utf-8') 
+				params = params.encode('windows-1251')
 				response = urllib.request.urlopen(url, params)
 				self.view.replace(edit, region, str(response.read()))
