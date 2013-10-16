@@ -1,12 +1,12 @@
-import sublime, sublime_plugin  
+import sublime, sublime_plugin, urllib
 
 class TypografCommand(sublime_plugin.TextCommand):  
 	def run(self, edit):
+		url = 'http://www.typograf.ru/webservice/'
 		for region in self.view.sel():
 			if not region.empty():
-				# Get the selected text
-				s = self.view.substr(region)
-				# Replace text
-				s = s.replace(' ', '')
-				# Replace the selection with transformed text
-				self.view.replace(edit, region, s)
+				selection = self.view.substr(region)
+				params = urllib.parse.urlencode({ 'text':selection })
+				params = params.encode('utf-8') 
+				response = urllib.request.urlopen(url, params)
+				self.view.replace(edit, region, str(response.read()))
