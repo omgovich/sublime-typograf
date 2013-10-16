@@ -1,0 +1,19 @@
+# IDE and SCM trash
+.idea/
+.mc/
+.settings/
+.subversion/
+.buildpath
+.classpath
+.cproject
+.loadpath
+.metadata
+.pmt
+.project
+
+# OS trash
+$RECYCLE.BIN/
+.DS_Store
+Desktop.ini
+ehthumbs.db
+Thumbs.db
