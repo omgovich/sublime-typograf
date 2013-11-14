@@ -5,7 +5,6 @@ class TypografCommand(sublime_plugin.TextCommand):
 	def run(self, edit, **args):
 		url = 'http://www.typograf.ru/webservice/'
 		xml = '<?xml version="1.0" encoding="windows-1251" ?><preferences><tags delete="0">' + args['tags'] + '</tags></preferences>'
-		print(xml)
 		for region in self.view.sel():
 			if not region.empty():
 				selection = self.view.substr(region)
