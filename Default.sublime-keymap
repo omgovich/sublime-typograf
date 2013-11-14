@@ -1,0 +1,4 @@
+[
+    { "keys": ["ctrl+shift+t"], "command": "typograf", "args": {"tags": "1"} },
+    { "keys": ["ctrl+alt+t"], "command": "typograf", "args": {"tags": "0"} }
+]
