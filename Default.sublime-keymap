@@ -1,4 +1,6 @@
 [
-    { "keys": ["ctrl+shift+t"], "command": "typograf", "args": {"tags": "1"} },
-    { "keys": ["ctrl+alt+t"], "command": "typograf", "args": {"tags": "0"} }
+    { "keys": ["ctrl+shift+t"], "command": "typograf", "args": {"tags": "1", "paste":false} },
+    { "keys": ["ctrl+alt+t"], "command": "typograf", "args": {"tags": "0", "paste":false} },
+    { "keys": ["ctrl+shift+v"], "command": "typograf", "args": {"tags": "1", "paste":true} },
+    { "keys": ["ctrl+alt+v"], "command": "typograf", "args": {"tags": "0", "paste":true} }
 ]
